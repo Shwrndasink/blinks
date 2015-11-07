@@ -1,0 +1,36 @@
+
+<!doctype html>
+<html>
+  
+<head>
+  <title>This is my page</title>
+</head>
+<title>
+  
+</title>
+
+<script type="text/javascript">
+  function blink() {
+    var blinks = document.getElementsByTagName('blink');
+    for (var i = blinks.length - 1; i >= 0; i--) {
+      var s = blinks[i];
+      // s.style.visibility = (s.style.visibility === 'visible') ? 'hidden' : 'visible';
+      if(s.style.visibility === 'visible'){
+        s.style.visibility = 'hidden';
+      } else {
+        s.style.visibility = 'visible';
+      }
+    }
+    window.setTimeout(blink, 1000);
+  }
+  if (document.addEventListener) document.addEventListener("DOMContentLoaded", blink, false);
+  else if (window.addEventListener) window.addEventListener("load", blink, false);
+  else if (window.attachEvent) window.attachEvent("onload", blink);
+  else window.onload = blink;
+
+  var name = 'Marc';
+  console.log(name.toUpperCase());
+
+</script>
+<blink>Text to blink here</blink>
+</html>
